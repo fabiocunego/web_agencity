@@ -1,8 +1,108 @@
-<html>
-    <head>
-        <title>Benvenuto</title>
-    </head>
-    <body>
-        <div align="center">Hello World!</div>
-    </body>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agencity</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    header {
+      margin-top: 30px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    header img {
+      max-width: 90%;
+      height: auto;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 800px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.5;
+    }
+
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      background-color: #fff;
+      color: #000;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 1em;
+      transition: background-color 0.3s;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .buttons a:hover {
+      background-color: #ccc;
+    }
+
+    @media (min-width: 600px) {
+      h1 {
+        font-size: 2.5em;
+      }
+
+      p {
+        font-size: 1.2em;
+      }
+
+      .buttons a {
+        font-size: 1.1em;
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo-agencity.png" alt="Logo Agencity">
+  </header>
+  <main>
+    <h1>Benvenuto su Agencity</h1>
+    <p>Agencity è una startup che mira a creare connessioni tra persone, passioni, volontariato e attività commerciali locali. Operiamo come un ponte tra il talento individuale, le realtà del terzo settore e le esigenze del territorio. Il nostro approccio è collaborativo, innovativo e aperto a chiunque desideri attivarsi per migliorare la propria comunità.</p>
+
+    <div class="buttons">
+      <a href="https://docs.google.com/forms/d/e/PROPRIETARIO_FORM" target="_blank">Sei un proprietario di un negozio?</a>
+      <a href="https://docs.google.com/forms/d/e/ASSOCIAZIONE_FORM" target="_blank">Sei parte di una associazione di volontari o del terzo settore?</a>
+      <a href="https://docs.google.com/forms/d/e/PASSIONE_FORM" target="_blank">Hai una passione?</a>
+      <a href="https://docs.google.com/forms/d/e/TALENTI_FORM" target="_blank">Ti piacerebbe fare parte di un'associazione per sviluppare i tuoi talenti?</a>
+    </div>
+  </main>
+</body>
 </html>
