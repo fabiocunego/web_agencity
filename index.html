@@ -23,6 +23,7 @@
       background-repeat: repeat;
       background-size: cover;
       background-position: center;
+      scroll-behavior: smooth;
     }
 
     header {
@@ -66,16 +67,16 @@
       color: #000;
     }
 
-    main {
-      padding: 20px 20px 40px 20px;
+    section {
+      padding: 60px 20px;
       max-width: 800px;
       width: 100%;
       background-color: rgba(0, 0, 0, 0.6);
       border-radius: 12px;
-      z-index: 1;
+      margin: 40px 0;
     }
 
-    h1 {
+    h1, h2 {
       font-size: 2em;
       margin-bottom: 20px;
     }
@@ -93,7 +94,8 @@
       width: 100%;
     }
 
-    .buttons a {
+    .buttons a,
+    .cta-button {
       text-decoration: none;
       background-color: rgba(255, 255, 255, 0.9);
       color: #000;
@@ -107,12 +109,13 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     }
 
+    .cta-button:hover,
     .buttons a:hover {
       background-color: #ccc;
     }
 
     @media (min-width: 600px) {
-      h1 {
+      h1, h2 {
         font-size: 2.5em;
       }
 
@@ -120,14 +123,15 @@
         font-size: 1.2em;
       }
 
-      .buttons a {
+      .buttons a,
+      .cta-button {
         font-size: 1.1em;
         padding: 18px;
       }
     }
   </style>
 </head>
-<body>
+<body id="top">
   <header>
     <img src="agencityr.jpeg" alt="Logo Agencity">
     <nav>
@@ -140,15 +144,36 @@
     </nav>
   </header>
 
-  <main>
-    <h1>Benvenuto su Agencity!</h1>
-    <p>Agencity è una startup che mira a creare connessioni tra persone, passioni, volontariato e attività commerciali locali. Operiamo come un ponte tra il talento individuale, le realtà del terzo settore e le esigenze del territorio. Il nostro approccio è collaborativo, innovativo e aperto a chiunque desideri attivarsi per migliorare la propria comunità.</p>
+  <section id="chi-siamo">
+    <h2>Chi siamo</h2>
+    <p>Agencity è una startup nata per creare connessioni tra persone, passioni, volontariato e attività commerciali locali. Crediamo nella collaborazione e nella partecipazione attiva alla vita della comunità.</p>
+  </section>
 
+  <section id="come-funziona">
+    <h2>Come funziona</h2>
+    <p>Offriamo un punto di contatto digitale dove negozianti, volontari e cittadini con passioni possono trovare collaborazioni, occasioni e supporto attraverso moduli semplici e accessibili.</p>
+  </section>
+
+  <section id="faq">
+    <h2>Domande frequenti</h2>
+    <p>Hai dubbi su come funziona Agencity o su come puoi partecipare? Consulta le nostre domande frequenti (contenuti in aggiornamento).</p>
+  </section>
+
+  <section id="contatti">
+    <h2>Contatti</h2>
+    <p>Per informazioni o proposte scrivici all’indirizzo: <a href="mailto:info@agencity.it">info@agencity.it</a></p>
+  </section>
+
+  <section>
+    <h2>Partecipa con noi</h2>
     <div class="buttons">
       <a href="https://docs.google.com/forms/d/e/PROPRIETARIO_FORM" target="_blank">Sei un proprietario di un negozio?</a>
       <a href="https://docs.google.com/forms/d/e/ASSOCIAZIONE_FORM" target="_blank">Sei parte di una associazione di volontari o del terzo settore?</a>
       <a href="https://docs.google.com/forms/d/e/PASSIONE_FORM" target="_blank">Hai una passione? Ti piacerebbe fare parte di un'associazione per sviluppare i tuoi talenti?</a>
     </div>
-  </main>
+  </section>
+  <footer>
+    <a href="#top" class="cta-button" style="margin-bottom: 40px; display: inline-block;">Torna su</a>
+  </footer>
 </body>
 </html>
