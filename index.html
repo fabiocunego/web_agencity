@@ -66,13 +66,13 @@
       color: #000;
     }
 
-    section {
-      padding: 40px 20px;
+    main {
+      padding: 20px 20px 40px 20px;
       max-width: 800px;
       width: 100%;
       background-color: rgba(0, 0, 0, 0.6);
       border-radius: 12px;
-      margin: 20px 0;
+      z-index: 1;
     }
 
     h1 {
@@ -85,8 +85,15 @@
       line-height: 1.5;
     }
 
-    .cta-button {
-      display: inline-block;
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+    }
+
+    .buttons a {
       text-decoration: none;
       background-color: rgba(255, 255, 255, 0.9);
       color: #000;
@@ -94,11 +101,13 @@
       border-radius: 8px;
       font-size: 1em;
       transition: background-color 0.3s, box-shadow 0.3s;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
       box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-      margin-top: 20px;
     }
 
-    .cta-button:hover {
+    .buttons a:hover {
       background-color: #ccc;
     }
 
@@ -111,7 +120,7 @@
         font-size: 1.2em;
       }
 
-      .cta-button {
+      .buttons a {
         font-size: 1.1em;
         padding: 18px;
       }
@@ -131,27 +140,15 @@
     </nav>
   </header>
 
-  <section id="intro">
+  <main>
     <h1>Benvenuto su Agencity!</h1>
     <p>Agencity è una startup che mira a creare connessioni tra persone, passioni, volontariato e attività commerciali locali. Operiamo come un ponte tra il talento individuale, le realtà del terzo settore e le esigenze del territorio. Il nostro approccio è collaborativo, innovativo e aperto a chiunque desideri attivarsi per migliorare la propria comunità.</p>
-  </section>
 
-  <section id="negozianti">
-    <h2>Sei un proprietario di un negozio?</h2>
-    <p>Scopri come Agencity può aiutarti a entrare in contatto con la comunità e aumentare la tua visibilità.</p>
-    <a class="cta-button" href="https://docs.google.com/forms/d/e/PROPRIETARIO_FORM" target="_blank">Compila il modulo</a>
-  </section>
-
-  <section id="associazioni">
-    <h2>Fai parte di un'associazione di volontariato o del terzo settore?</h2>
-    <p>Connettiti con nuovi volontari e iniziative sul territorio grazie ad Agencity.</p>
-    <a class="cta-button" href="https://docs.google.com/forms/d/e/ASSOCIAZIONE_FORM" target="_blank">Compila il modulo</a>
-  </section>
-
-  <section id="talenti">
-    <h2>Hai una passione? Vuoi sviluppare i tuoi talenti?</h2>
-    <p>Agencity ti aiuta a trovare un'associazione o un gruppo con cui crescere, imparare e contribuire.</p>
-    <a class="cta-button" href="https://docs.google.com/forms/d/e/PASSIONE_FORM" target="_blank">Compila il modulo</a>
-  </section>
+    <div class="buttons">
+      <a href="https://docs.google.com/forms/d/e/PROPRIETARIO_FORM" target="_blank">Sei un proprietario di un negozio?</a>
+      <a href="https://docs.google.com/forms/d/e/ASSOCIAZIONE_FORM" target="_blank">Sei parte di una associazione di volontari o del terzo settore?</a>
+      <a href="https://docs.google.com/forms/d/e/PASSIONE_FORM" target="_blank">Hai una passione? Ti piacerebbe fare parte di un'associazione per sviluppare i tuoi talenti?</a>
+    </div>
+  </main>
 </body>
 </html>
