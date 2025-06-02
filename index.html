@@ -160,9 +160,90 @@
   </section>
 
   <section id="faq">
-    <h2>Domande frequenti</h2>
-    <p>Hai dubbi su come funziona Agencity o su come puoi partecipare? Consulta le nostre domande frequenti (contenuti in aggiornamento).</p>
-  </section>
+  <h2>Domande frequenti</h2>
+
+  <div class="faq">
+    <button class="faq-question">Sono Antonio, proprietario di un negozio e in questo momento è vuoto sto cercando di venderlo, ho sentito da un amico di Agencty, vorrei sapere come ottenere il risparmio sul pagamento di Imu e Tari.</button>
+    <div class="faq-answer">
+      <p>
+        Caro Antonio lei è stato consigliato bene. Con Agencty lei non perderà occasione per vendere o affittare il suo immobile ma lo potrà fare presentando il negozio nelle migliori condizioni ai suoi possibili acquirenti. Potrà presentare il suo immobile a potenziali clienti sia direttamente che attraverso un intermediario, avvalendosi del lavoro della sua agenzia immobiliare di fiducia al prezzo da lei richiesto. Nel frattempo attraverso Agencity permetterà ad un ente del terzo settore di fruire degli spazio del negozio. Loro avranno una location dove poter riunirsi ed operare. Attraverso questa operazione otterrà una detrazione totale dell'imposta IMU per il periodo interessato, loro terranno il suo spazio commerciale pulito, in ordine, con le utenze attive, le vetrine illuminate, pagheranno le tasse sui rifiuti e permetteranno agli interessati all'acquisto o all'affitto di vedere e valutare il negozio nelle migliori condizioni. Se non dovesse fare questo il suo negozio rimarrebbe vuoto, trasandato, buio, con le vetrine spente sporche polverose le ragnatele in poco tempo risulterebbe abbandonato. In condizioni di abbandono quale spazio potrebbe attirare l'attenzione di chi vuole iniziare una nuova attività in zona? Quando si vuole vendere un'auto non la si può presentare sporca con la batteria scarica e piena di ragni e di fango. 
+      </p>
+    </div>
+  </div>
+
+  <div class="faq">
+    <button class="faq-question">Sono Mara, ho un negozio di scarpe e tra pochi mesi penso di chiudere per godermi la pensione e i nipoti. Se affido il mio negozio ad Agencity e poi l'attività a fianco alla mia decidesse di acquistare i miei muri per avere più metratura o arrivasse un altro compratore in quanto tempo riuscirei a liberare gli spazi?</button>
+    <div class="faq-answer">
+      <p>
+        Cara Mara, i tuoi dubbi sui tempi di liberazione degli immobili sono comprensibili. Nel contratto che si redige all'inizio è chiaramente indicato il tempo di liberazione che normalmente è di 60 giorni dalla richiesta del proprietario, per esigenze particolari di questo può essere ridotto anche a tempi inferiori o allungato se il proprietario pensa di non voler mettere pressione. C'è la possibilità di prevedere anche penali in caso di ritardo nella liberazione. In ogni caso per una compravendita immobiliare commerciale questi sono tempi tecnici che separano normalmente il preliminare da un rogito notarile, per cui non ci sono perdite di tempo rispetto ad una compravendita con un negozio vuoto; inoltre chi entra potrà subentrare nei contratti di fornitura acqua gas e energia con notevole risparmio di tempo e denaro.
+      </p>
+    </div>
+  </div>
+
+  <div class="faq">
+    <button class="faq-question">Sono Dario, insieme ad altri appassionati ho fondato anni fa un circolo fotografico e siamo stati ospitati per i nostri incontri da Don Luigi parroco di V... il paese che si trova a 25 km da casa mia. Come circolo abbiamo la possibilità di avere assegnato uno spazio più vicino? Sarà in uso esclusivo?</button>
+    <div class="faq-answer">
+      <p>
+        Ciao Dario se vi siete costituiti come associazione iscritta al RUNTS (Registro Unico Nazionale Terzo Settore) potrete iscrivervi per essere una delle associazioni assegnatarie di spazi nella tua città. Gli spazi saranno esclusivi se la vostra associazione assicura una attività minima degli spazi per avere un negozio aperto e vivo, uno spazio di socialità attivo. Se invece le vostre riunioni sono sporadiche, saltuarie, condividerete gli spazi con altre realtà. Ogni associazione avrà comunque a disposizione uno spazio per lo stoccaggio delle proprie attrezzature assegnato che potrà essere da voi gestito con lucchetti o altri dispositivi che li mettano al riparo dagli altri fruitori. In ogni caso consiglio l'installazione di sistemi di videosorveglianza avvalendosi di vecchi smartphone ed utilizzati per risalire a responsabilità per danni che si possono verificare; che in un'associazione possono essere causa di tensioni e sospetti. Se il tuo circolo fotografico non si è ancora iscritto al RUNTS, contattaci e Vi aiuteremo nell'iter di iscrizione!
+      </p>
+    </div>
+  </div>
+
+</section>
+
+<script>
+  // Accordion FAQ
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', function() {
+      this.classList.toggle('active');
+      let answer = this.nextElementSibling;
+      if (answer.style.maxHeight) {
+        answer.style.maxHeight = null;
+      } else {
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+
+<style>
+  .faq {
+    text-align: left;
+    margin-bottom: 18px;
+  }
+  .faq-question {
+    width: 100%;
+    background: #222;
+    color: #ffe066;
+    font-weight: bold;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.08em;
+    box-shadow: 0 1px 4px #0007;
+    outline: none;
+    transition: background 0.2s;
+  }
+  .faq-question.active, .faq-question:hover {
+    background: #ffe066;
+    color: #222;
+  }
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background: rgba(0,0,0,0.70);
+    color: #fff;
+    border-radius: 0 0 8px 8px;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+  .faq-question.active + .faq-answer {
+    padding: 15px 16px;
+    margin-top: 0;
+  }
+</style>
 
   <section id="contatti">
     <h2>Contatti</h2>
